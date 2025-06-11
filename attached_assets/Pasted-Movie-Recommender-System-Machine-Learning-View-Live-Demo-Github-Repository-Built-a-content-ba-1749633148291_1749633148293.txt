@@ -1,0 +1,34 @@
+Movie Recommender System (Machine Learning) View Live Demo — Github Repository
+• Built a content-based movie recommendation system using user preferences.
+• Integrated TMDB API and deployed using Streamlit.
+• Tech Stack: Python, Streamlit, Pandas, TMDB API, Pickle
+Object Detection System View Live Demo — Github Repository
+• Developed a real-time object detection web app using YOLOv8 and webcam/image input.
+• Created an intuitive UI with adjustable detection settings.
+• Tech Stack: Streamlit, OpenCV, Ultralytics YOLOv8, Pillow (PIL), NumPy
+Adaptive Quiz App View Live Demo — Github Repository
+• A React-based quiz application that intelligently adapts question difficulty based on user performance.
+• Features a modern, animated UI with engaging interactions.
+1
+• Tech Stack: React.js, CSS, HTML
+Swipe-Based Learning Recommendation System View Live Demo — Github Repository
+• A modern, interactive application that helps users discover personalized learning techniques through an intuitive swipe
+interface.
+• The system intelligently learns from user preferences to provide increasingly relevant recommendations.
+• Tech Stack: React.js, HTML, CSS
+Chess Game View Live Demo — Github Repository
+• Created a fully functional chess game with interactive UI and logic.
+• Implemented turn-based system, piece selection, and valid move handling.
+• Tech Stack: JavaScript, HTML, CSS, jQuery
+spotify Music Playlist View Live Demo — Github Repository
+• Built a responsive music player with sleek UI and basic functionality.
+• Tech Stack: HTML, CSS, JavaScript
+Simon Says Game View Live Demo — Github Repository
+• Developed a memory-based Simon Says game with event-driven programming.
+• Tech Stack: JavaScript, HTML, CSS
+Spotify Clone – Responsive UI Design with HTML and CSS View Live Demo — Github Repository
+• Designed a Spotify-inspired UI with responsive layout and navigation.
+• Tech Stack: HTML, CSS
+A Simple Chat Applicaton Interface View Live Demo — Github Repository
+• Built a chat UI with sidebar navigation, message bubbles, and mobile-friendly design.
+• Tech Stack: HTML, CSS, JavaScript
