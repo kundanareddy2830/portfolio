@@ -53,7 +53,6 @@ export const portfolioData = {
     frameworks: [
       { name: "Node.js", icon: "fab fa-node-js", color: "text-[#339933]" },
       { name: "Express", icon: "fas fa-server", color: "text-[#000000]" },
-      { name: "Django", icon: "fab fa-python", color: "text-[#092E20]" },
       { name: "Flask", icon: "fas fa-flask", color: "text-[#000000]" },
       { name: "Next.js", icon: "fab fa-react", color: "text-[#000000]" },
       { name: "Vue.js", icon: "fab fa-vuejs", color: "text-[#4FC08D]" }
@@ -61,10 +60,7 @@ export const portfolioData = {
     cloud: [
       { name: "AWS", icon: "fab fa-aws", color: "text-[#232F3E]" },
       { name: "Azure", icon: "fab fa-microsoft", color: "text-[#0078D4]" },
-      { name: "GCP", icon: "fab fa-google", color: "text-[#4285F4]" },
-      { name: "MongoDB", icon: "fas fa-database", color: "text-[#47A248]" },
-      { name: "PostgreSQL", icon: "fas fa-database", color: "text-[#336791]" },
-      { name: "Redis", icon: "fas fa-database", color: "text-[#DC382D]" }
+      { name: "MongoDB", icon: "fas fa-database", color: "text-[#47A248]" }
     ]
   },
   education: {
