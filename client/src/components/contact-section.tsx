@@ -140,20 +140,10 @@ export default function ContactSection() {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href={portfolioData.social.twitter}
+                  href={portfolioData.social.email}
                   className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  <Twitter size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-slate-200 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Dribbble size={20} />
+                  <Mail size={20} />
                 </a>
               </div>
             </div>

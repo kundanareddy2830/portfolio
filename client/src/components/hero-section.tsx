@@ -4,7 +4,7 @@ import { portfolioData } from "@/lib/data";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(sectionId);
+    const section = document.querySelector(sectionId) as HTMLElement;
     if (section) {
       const offsetTop = section.offsetTop - 80;
       window.scrollTo({
@@ -75,14 +75,6 @@ export default function HeroSection() {
               rel="noopener noreferrer"
             >
               <Linkedin size={24} />
-            </a>
-            <a
-              href={portfolioData.social.twitter}
-              className="p-3 rounded-full glassmorphism bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 hover:scale-110"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Twitter size={24} />
             </a>
             <a
               href={portfolioData.social.email}

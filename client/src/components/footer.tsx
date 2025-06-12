@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Dribbble } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { portfolioData } from "@/lib/data";
 import type { FC } from "react";
 
@@ -43,20 +43,10 @@ const Footer: FC = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href={portfolioData.social.twitter}
+                href={portfolioData.social.email}
                 className="text-slate-300 hover:text-accent transition-colors duration-200"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="text-slate-300 hover:text-accent transition-colors duration-200"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Dribbble size={20} />
+                <Mail size={20} />
               </a>
             </div>
           </div>
