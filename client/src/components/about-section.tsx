@@ -94,12 +94,12 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="aspect-square rounded-full bg-gradient-to-br from-primary to-accent p-1 overflow-hidden">
+            <div className="aspect-square rounded-full bg-gradient-to-br from-primary to-accent p-1 overflow-hidden w-80 h-80 mx-auto">
               <img
                 src="/images/projects/profile-photo.jpg"
                 alt="Profile Picture"
-                width={500}
-                height={500}
+                width={300}
+                height={300}
                 className="rounded-full object-cover w-full h-full"
               />
             </div>
