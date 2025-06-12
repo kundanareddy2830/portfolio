@@ -16,7 +16,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
       <img
         src={project.image}
         alt={project.title}
-        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+        className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-300"></div>
       <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -42,14 +42,14 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
         </div>
       </div>
     </div>
-    <div className="p-6 bg-white">
-      <h3 className="text-xl font-bold text-slate-800 mb-2">{project.title}</h3>
-      <p className="text-slate-600 text-sm mb-4">{project.shortDescription}</p>
+    <div className="p-8 bg-white">
+      <h3 className="text-2xl font-bold text-slate-800 mb-3">{project.title}</h3>
+      <p className="text-slate-600 text-base mb-4">{project.shortDescription}</p>
       <div className="flex flex-wrap gap-2">
         {project.technologies.map((tech: string) => (
           <span
             key={tech}
-            className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full"
+            className="px-4 py-1.5 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
           >
             {tech}
           </span>
@@ -81,13 +81,13 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {displayedProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {!showAllProjects && (
+        {portfolioData.projects.length > 4 && (
           <motion.div
             className="text-center mt-12"
             initial={{ opacity: 0, y: 20 }}
@@ -96,26 +96,18 @@ export default function ProjectsSection() {
             viewport={{ once: true }}
           >
             <button 
-              onClick={() => setShowAllProjects(true)}
+              onClick={() => setShowAllProjects(!showAllProjects)}
               className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
             >
-              View All Projects <i className="fas fa-arrow-right ml-2"></i>
-            </button>
-          </motion.div>
-        )}
-
-        {showAllProjects && (
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <button 
-              onClick={() => setShowAllProjects(false)}
-              className="bg-slate-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
-            >
-              Show Less <i className="fas fa-arrow-up ml-2"></i>
+              {showAllProjects ? (
+                <>
+                  Show Less <i className="fas fa-chevron-up ml-2"></i>
+                </>
+              ) : (
+                <>
+                  View More Projects <i className="fas fa-chevron-down ml-2"></i>
+                </>
+              )}
             </button>
           </motion.div>
         )}

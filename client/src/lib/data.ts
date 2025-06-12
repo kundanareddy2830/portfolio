@@ -27,39 +27,44 @@ export const portfolioData = {
   },
   skills: {
     frontend: [
-      { name: "React", icon: "fab fa-react", color: "text-blue-500" },
-      { name: "JavaScript", icon: "fab fa-js", color: "text-yellow-500" },
-      { name: "HTML5", icon: "fab fa-html5", color: "text-orange-500" },
-      { name: "CSS3", icon: "fab fa-css3-alt", color: "text-blue-500" },
-      { name: "Node.js", icon: "fab fa-node-js", color: "text-green-500" }
+      { name: "React", icon: "fab fa-react", color: "text-[#61DAFB]" },
+      { name: "JavaScript", icon: "fab fa-js", color: "text-[#F7DF1E]" },
+      { name: "HTML5", icon: "fab fa-html5", color: "text-[#E34F26]" },
+      { name: "CSS3", icon: "fab fa-css3-alt", color: "text-[#1572B6]" },
+      { name: "TypeScript", icon: "fab fa-js", color: "text-[#3178C6]" },
+      { name: "Tailwind", icon: "fab fa-css3", color: "text-[#06B6D4]" }
     ],
     aiml: [
-      { name: "Artificial Intelligence", icon: "fas fa-brain", color: "text-purple-600" },
-      { name: "Machine Learning", icon: "fas fa-robot", color: "text-blue-600" },
-      { name: "Deep Learning", icon: "fas fa-network-wired", color: "text-indigo-600" },
-      { name: "Computer Vision", icon: "fas fa-eye", color: "text-orange-600" },
-      { name: "NLP", icon: "fas fa-comments", color: "text-green-600" },
-      { name: "Generative AI", icon: "fas fa-magic", color: "text-pink-600" }
+      { name: "TensorFlow", icon: "fab fa-python", color: "text-[#FF6F00]" },
+      { name: "PyTorch", icon: "fab fa-python", color: "text-[#EE4C2C]" },
+      { name: "Scikit-learn", icon: "fab fa-python", color: "text-[#F7931E]" },
+      { name: "OpenCV", icon: "fas fa-camera", color: "text-[#5C3EE8]" },
+      { name: "NLP", icon: "fas fa-comments", color: "text-[#4CAF50]" },
+      { name: "Computer Vision", icon: "fas fa-eye", color: "text-[#2196F3]" }
     ],
     programming: [
-      { name: "Python", icon: "fab fa-python", color: "text-yellow-500" },
-      { name: "C", icon: "fas fa-code", color: "text-blue-700" },
-      { name: "Java", icon: "fab fa-java", color: "text-red-600" },
-      { name: "SQL", icon: "fas fa-database", color: "text-blue-700" },
-      { name: "Data Structures", icon: "fas fa-sitemap", color: "text-purple-500" }
+      { name: "Python", icon: "fab fa-python", color: "text-[#3776AB]" },
+      { name: "Java", icon: "fab fa-java", color: "text-[#007396]" },
+      { name: "C++", icon: "fas fa-code", color: "text-[#00599C]" },
+      { name: "SQL", icon: "fas fa-database", color: "text-[#336791]" },
+      { name: "Git", icon: "fab fa-git-alt", color: "text-[#F05032]" },
+      { name: "Docker", icon: "fab fa-docker", color: "text-[#2496ED]" }
     ],
     frameworks: [
-      { name: "TensorFlow", icon: "fas fa-brain", color: "text-orange-500" },
-      { name: "PyTorch", icon: "fas fa-fire", color: "text-red-500" },
-      { name: "Keras", icon: "fas fa-layer-group", color: "text-red-400" },
-      { name: "OpenCV", icon: "fas fa-camera", color: "text-green-500" },
-      { name: "OpenAI API", icon: "fas fa-robot", color: "text-green-600" }
+      { name: "Node.js", icon: "fab fa-node-js", color: "text-[#339933]" },
+      { name: "Express", icon: "fas fa-server", color: "text-[#000000]" },
+      { name: "Django", icon: "fab fa-python", color: "text-[#092E20]" },
+      { name: "Flask", icon: "fas fa-flask", color: "text-[#000000]" },
+      { name: "Next.js", icon: "fab fa-react", color: "text-[#000000]" },
+      { name: "Vue.js", icon: "fab fa-vuejs", color: "text-[#4FC08D]" }
     ],
     cloud: [
-      { name: "AWS", icon: "fab fa-aws", color: "text-orange-500" },
-      { name: "Cloud Computing", icon: "fas fa-cloud", color: "text-blue-400" },
-      { name: "Data Science", icon: "fas fa-chart-bar", color: "text-green-600" },
-      { name: "Big Data", icon: "fas fa-database", color: "text-purple-600" }
+      { name: "AWS", icon: "fab fa-aws", color: "text-[#232F3E]" },
+      { name: "Azure", icon: "fab fa-microsoft", color: "text-[#0078D4]" },
+      { name: "GCP", icon: "fab fa-google", color: "text-[#4285F4]" },
+      { name: "MongoDB", icon: "fas fa-database", color: "text-[#47A248]" },
+      { name: "PostgreSQL", icon: "fas fa-database", color: "text-[#336791]" },
+      { name: "Redis", icon: "fas fa-database", color: "text-[#DC382D]" }
     ]
   },
   education: {
@@ -93,7 +98,7 @@ export const portfolioData = {
       title: "Movie Recommender System",
       description: "Built a content-based movie recommendation system using user preferences. Integrated TMDB API and deployed using Streamlit with intelligent recommendation algorithms.",
       shortDescription: "AI-powered movie recommendations using machine learning",
-      image: "@assets/1_1749633968603.jpg",
+      image: "/images/projects/movie-recommender.jpg",
       technologies: ["Python", "Streamlit", "Pandas", "TMDB API", "Pickle"],
       demoUrl: "https://movierecommendation-system28.streamlit.app/",
       githubUrl: "https://github.com/kundanareddy2830/movie_recommendation-system.git"
@@ -103,7 +108,7 @@ export const portfolioData = {
       title: "Object Detection System",
       description: "Developed a real-time object detection web app using YOLOv8 and webcam/image input. Created an intuitive UI with adjustable detection settings.",
       shortDescription: "Real-time object detection with YOLOv8 integration",
-      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "/images/projects/object-detection.jpg",
       technologies: ["Streamlit", "OpenCV", "YOLOv8", "PIL", "NumPy"],
       demoUrl: "https://object-detection-28.streamlit.app/",
       githubUrl: "https://github.com/kundanareddy2830/object-detection.git"
@@ -113,37 +118,37 @@ export const portfolioData = {
       title: "Adaptive Quiz App",
       description: "A React-based quiz application that intelligently adapts question difficulty based on user performance. Features a modern, animated UI with engaging interactions.",
       shortDescription: "Smart quiz app with adaptive difficulty system",
-      image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "/images/projects/quiz-app.jpg",
       technologies: ["React.js", "CSS", "HTML"],
       demoUrl: "https://kundanareddy2830.github.io/quiz/",
       githubUrl: "https://github.com/kundanareddy2830/quiz.git"
     },
     {
       id: 4,
-      title: "Swipe-Based Learning Recommendation",
-      description: "A modern, interactive application that helps users discover personalized learning techniques through an intuitive swipe interface. The system intelligently learns from user preferences.",
-      shortDescription: "Personalized learning recommendations with swipe interface",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      technologies: ["React.js", "HTML", "CSS"],
-      demoUrl: "https://kundanareddy2830.github.io/swipe-based-recommender/",
-      githubUrl: "https://github.com/kundanareddy2830/swipe-based-recommender.git"
-    },
-    {
-      id: 5,
       title: "Interactive Chess Game",
       description: "Created a fully functional chess game with interactive UI and logic. Implemented turn-based system, piece selection, and valid move handling with elegant design.",
       shortDescription: "Full-featured chess game with interactive gameplay",
-      image: "@assets/3_1749633979983.jpg",
+      image: "/images/projects/chess-game.jpg",
       technologies: ["JavaScript", "HTML", "CSS", "jQuery"],
       demoUrl: "https://kundanareddy2830.github.io/chess-game/",
       githubUrl: "https://github.com/kundanareddy2830/chess-game.git"
+    },
+    {
+      id: 5,
+      title: "Simon Says Game",
+      description: "Developed a memory-based Simon Says game with event-driven programming. Features interactive gameplay, sound effects, and progressive difficulty levels.",
+      shortDescription: "Classic memory game with interactive design",
+      image: "/images/projects/simon-says.jpg",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      demoUrl: "https://kundanareddy2830.github.io/simon-game/",
+      githubUrl: "https://github.com/kundanareddy2830/simon-game.git"
     },
     {
       id: 6,
       title: "Spotify Music Interface",
       description: "Built a responsive music player with sleek UI and basic functionality. Features include playlist management, responsive design, and modern interface elements.",
       shortDescription: "Modern music player with responsive design",
-      image: "@assets/5_1749634003147.jpg",
+      image: "/images/projects/spotify-ui.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
       demoUrl: "https://kundanareddy2830.github.io/spotify-UI/",
       githubUrl: "https://github.com/kundanareddy2830/spotify-UI.git"
@@ -153,30 +158,30 @@ export const portfolioData = {
       title: "Music Playlist Player",
       description: "Built a responsive music player with sleek UI and basic functionality. Features playlist management, audio controls, and modern interface design.",
       shortDescription: "Interactive music playlist with audio controls",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "/images/projects/playlist.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
       demoUrl: "https://kundanareddy2830.github.io/Playlist/",
       githubUrl: "https://github.com/kundanareddy2830/Playlist.git"
     },
     {
       id: 8,
-      title: "Simon Says Game",
-      description: "Developed a memory-based Simon Says game with event-driven programming. Features interactive gameplay, sound effects, and progressive difficulty levels.",
-      shortDescription: "Classic memory game with interactive design",
-      image: "@assets/4_1749634039527.jpg",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      demoUrl: "https://kundanareddy2830.github.io/simon-game/",
-      githubUrl: "https://github.com/kundanareddy2830/simon-game.git"
-    },
-    {
-      id: 9,
       title: "Chat Application Interface",
       description: "Built a chat UI with sidebar navigation, message bubbles, and mobile-friendly design. Features responsive layout and modern messaging interface.",
       shortDescription: "Modern chat interface with responsive design",
-      image: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "/images/projects/chat-app.jpg",
       technologies: ["HTML", "CSS", "JavaScript"],
       demoUrl: "https://kundanareddy2830.github.io/Chat-Application/",
       githubUrl: "https://github.com/kundanareddy2830/Chat-Application.git"
+    },
+    {
+      id: 9,
+      title: "Swipe-Based Learning Recommendation",
+      description: "A modern, interactive application that helps users discover personalized learning techniques through an intuitive swipe interface. The system intelligently learns from user preferences.",
+      shortDescription: "Personalized learning recommendations with swipe interface",
+      image: "/images/projects/learning-app.jpg",
+      technologies: ["React.js", "HTML", "CSS"],
+      demoUrl: "https://kundanareddy2830.github.io/swipe-based-recommender/",
+      githubUrl: "https://github.com/kundanareddy2830/swipe-based-recommender.git"
     }
   ]
 };

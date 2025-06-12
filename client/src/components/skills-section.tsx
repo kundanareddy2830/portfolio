@@ -11,8 +11,11 @@ const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
     whileHover={{ scale: 1.05 }}
   >
     <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 text-center">
-      <i className={`${skill.icon} text-4xl ${skill.color} mb-4`}></i>
-      <h4 className="font-semibold text-slate-800">{skill.name}</h4>
+      <div className="relative">
+        <i className={`${skill.icon} text-5xl ${skill.color} mb-4 transition-transform duration-300 group-hover:scale-110`}></i>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      </div>
+      <h4 className="font-semibold text-slate-800 text-lg">{skill.name}</h4>
     </div>
   </motion.div>
 );
