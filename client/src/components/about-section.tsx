@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, User } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { portfolioData } from "@/lib/data";
 
 export default function AboutSection() {
@@ -94,10 +94,14 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary to-accent p-1">
-              <div className="w-full h-full bg-slate-100 rounded-xl flex items-center justify-center">
-                <User size={96} className="text-slate-400" />
-              </div>
+            <div className="aspect-square rounded-full bg-gradient-to-br from-primary to-accent p-1 overflow-hidden">
+              <img
+                src="/images/projects/profile-photo.jpg"
+                alt="Profile Picture"
+                width={500}
+                height={500}
+                className="rounded-full object-cover w-full h-full"
+              />
             </div>
             {/* Floating elements for visual interest */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full opacity-20"></div>
