@@ -3,16 +3,16 @@ export const portfolioData = {
   title: "Full Stack Developer & AI/ML Enthusiast",
   description: "AI & Web Developer passionate about building smart, user-focused applications. Blending machine intelligence with clean, responsive design to solve real-world problems.",
   bio: {
-    short: "I'm a passionate AI & Web Developer driven by the goal of creating smart, intuitive, and impactful digital experiences. Currently pursuing a B.Tech in Artificial Intelligence and Machine Learning, I bring together the power of AI and modern web technologies to build innovative, user-centric applications.",
+    short: "I'm a passionate AI/ML enthusiast and web developer, always eager to build innovative solutions and create impactful projects. Currently pursuing a B.Tech in Artificial Intelligence and Machine Learning, I love blending AI with modern web technologies to deliver real-world impact.",
     detailed: [
       "What started as a curiosity about how machines can think has evolved into a dedication to developing intelligent systems that enhance everyday interactions. I focus on building applications that are not only functional and efficient, but also clean, responsive, and accessible to all.",
       "My expertise spans across machine learning algorithms, web development frameworks, and modern deployment technologies. I'm constantly exploring new ways to integrate AI capabilities into web applications to create more intelligent and personalized user experiences."
     ]
   },
   stats: {
-    projects: "15+",
-    experience: "2+",
-    clients: "10+"
+    projects: "10+",
+    technologies: "10+",
+    skills: "15+"
   },
   contact: {
     email: "kundanareddytamma@gmail.com",

@@ -18,7 +18,7 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-800 mb-4">About Me</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Passionate developer with {portfolioData.stats.experience} years of experience creating digital solutions that matter.
+            {portfolioData.description}
           </p>
         </motion.div>
 
@@ -77,12 +77,12 @@ export default function AboutSection() {
                 <div className="text-slate-600">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{portfolioData.stats.experience}</div>
-                <div className="text-slate-600">Years</div>
+                <div className="text-3xl font-bold text-primary">{portfolioData.stats.technologies}</div>
+                <div className="text-slate-600">Technologies</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">{portfolioData.stats.clients}</div>
-                <div className="text-slate-600">Clients</div>
+                <div className="text-3xl font-bold text-primary">{portfolioData.stats.skills}</div>
+                <div className="text-slate-600">Skills</div>
               </div>
             </motion.div>
           </motion.div>
