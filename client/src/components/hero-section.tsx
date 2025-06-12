@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-purple-800"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-purple-600 to-purple-800"
     >
       <div className="absolute inset-0 bg-black opacity-20"></div>
       <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ export default function HeroSection() {
           </motion.h1>
           
           <motion.p
-            className="text-xl sm:text-2xl lg:text-3xl mb-8 text-blue-100"
+            className="text-xl sm:text-2xl lg:text-3xl mb-8 text-primary-foreground"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -45,7 +45,7 @@ export default function HeroSection() {
           </motion.p>
           
           <motion.p
-            className="text-lg sm:text-xl mb-12 max-w-3xl mx-auto text-blue-50"
+            className="text-lg sm:text-xl mb-12 max-w-3xl mx-auto text-primary-foreground/90"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -96,6 +96,21 @@ export default function HeroSection() {
             >
               View My Work
             </button>
+            <a
+              href="/images/projects/my-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-all duration-300 flex items-center justify-center"
+            >
+              View CV
+            </a>
+            <a
+              href="/images/projects/my-resume.pdf"
+              download
+              className="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 flex items-center justify-center"
+            >
+              Download CV
+            </a>
             <button
               onClick={() => scrollToSection("#contact")}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-all duration-300"

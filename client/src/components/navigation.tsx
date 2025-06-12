@@ -21,11 +21,12 @@ export default function Navigation() {
       let current = "";
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
+        const htmlSection = section as HTMLElement;
+        const sectionTop = htmlSection.offsetTop - 100;
+        const sectionHeight = htmlSection.offsetHeight;
 
         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-          current = section.getAttribute("id") || "";
+          current = htmlSection.getAttribute("id") || "";
         }
       });
 
@@ -39,7 +40,7 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.querySelector(sectionId);
+    const section = document.querySelector(sectionId) as HTMLElement;
     if (section) {
       const offsetTop = section.offsetTop - 80;
       window.scrollTo({

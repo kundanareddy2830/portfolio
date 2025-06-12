@@ -114,19 +114,19 @@ export default function EducationSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold">AI/ML</div>
-                <div className="text-blue-100">Artificial Intelligence</div>
+                <div className="text-primary-foreground">Artificial Intelligence</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">Web Dev</div>
-                <div className="text-blue-100">Full Stack</div>
+                <div className="text-primary-foreground">Full Stack</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">Cloud</div>
-                <div className="text-blue-100">AWS & Computing</div>
+                <div className="text-primary-foreground">AWS & Computing</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold">Data</div>
-                <div className="text-blue-100">Science & Analytics</div>
+                <div className="text-primary-foreground">Science & Analytics</div>
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => (
         {project.technologies.map((tech: string) => (
           <span
             key={tech}
-            className="px-4 py-1.5 bg-blue-100 text-blue-800 text-sm font-medium rounded-full"
+            className="px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full"
           >
             {tech}
           </span>
