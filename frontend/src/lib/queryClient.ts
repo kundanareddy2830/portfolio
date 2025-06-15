@@ -15,18 +15,35 @@ export async function apiRequest(
   data?: unknown | undefined,
 ): Promise<Response> {
   const fullUrl = url.startsWith("http") ? url : `${API_URL}${url}`;
+  console.log('Making request to:', fullUrl, 'with method:', method);
+  
+  const headers: HeadersInit = {
+    'Accept': 'application/json',
+    ...(data ? { 'Content-Type': 'application/json' } : {})
+  };
+
   const res = await fetch(fullUrl, {
     method,
-    headers: {
-      ...(data ? { "Content-Type": "application/json" } : {}),
-    },
+    headers,
     body: data ? JSON.stringify(data) : undefined,
-    credentials: "include",
-    mode: "cors"
+    mode: 'cors',
+    credentials: 'omit' // Changed from 'include' to 'omit' since we don't need cookies
   });
 
-  await throwIfResNotOk(res);
-  return res;
+  console.log('Response status:', res.status);
+  const responseText = await res.text();
+  console.log('Response text:', responseText);
+
+  if (!res.ok) {
+    throw new Error(`${res.status}: ${responseText}`);
+  }
+
+  // Create a new Response with the text we already read
+  return new Response(responseText, {
+    status: res.status,
+    statusText: res.statusText,
+    headers: res.headers
+  });
 }
 
 type UnauthorizedBehavior = "returnNull" | "throw";
