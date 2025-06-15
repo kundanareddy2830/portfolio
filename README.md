@@ -15,12 +15,6 @@ This is my personal fullstack portfolio showcasing my skills in AI, web developm
 - Authentication: Passport.js
 - Email: Nodemailer
 
-## Projects
-- Movie Recommender System (AI/ML)
-- Object Detection System (Computer Vision)
-- Adaptive Quiz App (React)
-- Interactive Chess Game
-- And more...
 
 ## Getting Started
 
@@ -33,10 +27,3 @@ This is my personal fullstack portfolio showcasing my skills in AI, web developm
    ```bash
    npm run dev
    ```
-
-## Contact
-Feel free to reach out to me at kundanareddytamma@gmail.com or connect with me on [LinkedIn](https://www.linkedin.com/in/kundanareddytamma).
-
----
-
-🚀 Built & maintained by [Kundana Reddy](https://github.com/kundanareddy2830) 
