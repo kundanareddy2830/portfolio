@@ -26,7 +26,8 @@ app.use(cors({
   origin: ['https://milv-portfolio.netlify.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  credentials: true,
+  maxAge: 86400 // 24 hours
 }));
 
 app.use((req, res, next) => {
