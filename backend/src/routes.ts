@@ -25,9 +25,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate request body
       const validatedData = insertContactSchema.parse(req.body);
       
-      // Store contact in database
-      const contact = await storage.createContact(validatedData);
-      
       // Send email notification
       if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
         try {
@@ -49,18 +46,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
           };
           
           await transporter.sendMail(mailOptions);
+          
+          res.json({ 
+            success: true, 
+            message: "Thank you! Your message has been sent successfully."
+          });
         } catch (emailError) {
           console.error('Email sending failed:', emailError);
-          // Continue even if email fails - we still want to store the contact
+          res.status(500).json({ 
+            success: false, 
+            message: "Sorry, there was an error sending your message. Please try again." 
+          });
         }
+      } else {
+        res.status(500).json({ 
+          success: false, 
+          message: "Email configuration is missing. Please contact the administrator." 
+        });
       }
-      
-      res.json({ 
-        success: true, 
-        message: "Thank you! Your message has been sent successfully.",
-        contactId: contact.id 
-      });
-      
     } catch (error) {
       console.error('Contact form error:', error);
       
