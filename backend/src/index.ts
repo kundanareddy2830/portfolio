@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Configure CORS
 app.use(cors({
-  origin: ['https://milv-portfolio.netlify.app', 'http://localhost:5173'],
+  origin: ['https://kundanaportfolio.netlify.app', 'http://localhost:5173'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
