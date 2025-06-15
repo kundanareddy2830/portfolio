@@ -71,9 +71,12 @@ export function serveStatic(app: Express) {
   const distPath = path.resolve(__dirname, "../../dist/public");
 
   if (!fs.existsSync(distPath)) {
-    throw new Error(
-      `Could not find the build directory: ${distPath}, make sure to build the client first`,
-    );
+    log(`Warning: Client build directory not found at ${distPath}. API-only mode enabled.`);
+    // Return a simple message for the root path
+    app.get("/", (_req, res) => {
+      res.json({ message: "API is running. Client build not found." });
+    });
+    return;
   }
 
   app.use(express.static(distPath));
