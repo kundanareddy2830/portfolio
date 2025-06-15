@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "npx esbuild src/index.ts --bundle --platform=node --format=esm --target=node18 --outfile=dist/index.js --external:vite --external:nanoid --external:zod --external:drizzle-orm/pg-core --external:drizzle-zod --alias:@shared=../shared",
-    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "start": "npx cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development node --loader ts-node/esm src/index.ts"
   },
   "dependencies": {
