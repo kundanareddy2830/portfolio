@@ -27,7 +27,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <motion.p
-            className="text-2xl sm:text-3xl lg:text-4xl font-medium mb-2 text-primary-foreground/90"
+            className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-3 text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
