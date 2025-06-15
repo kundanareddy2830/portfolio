@@ -1,10 +1,13 @@
 import { config } from 'dotenv';
-config();
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Configure dotenv with explicit path
+const __dirname = dirname(fileURLToPath(import.meta.url));
+config({ path: `${__dirname}/../.env` });
 
 import express, { type Request, Response, NextFunction } from 'express';
 import cors from 'cors';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import { createTransport } from 'nodemailer';
 import { z } from 'zod';
 import { eq } from 'drizzle-orm';
