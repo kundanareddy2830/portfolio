@@ -1,11 +1,14 @@
 import express, { type Express } from "express";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from 'url';
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
@@ -25,7 +28,7 @@ export async function setupVite(app: Express, server: Server) {
   };
 
   const vite = await createViteServer({
-    configFile: path.resolve(import.meta.dirname, "../../frontend/vite.config.ts"),
+    configFile: path.resolve(__dirname, "../../frontend/vite.config.ts"),
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
@@ -43,7 +46,7 @@ export async function setupVite(app: Express, server: Server) {
 
     try {
       const clientTemplate = path.resolve(
-        import.meta.dirname,
+        __dirname,
         "../../frontend",
         "index.html",
       );
@@ -64,7 +67,7 @@ export async function setupVite(app: Express, server: Server) {
 }
 
 export function serveStatic(app: Express) {
-  const distPath = path.resolve(import.meta.dirname, "../../dist/public");
+  const distPath = path.resolve(__dirname, "../../dist/public");
 
   if (!fs.existsSync(distPath)) {
     throw new Error(
