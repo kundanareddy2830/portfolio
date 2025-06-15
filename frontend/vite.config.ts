@@ -7,13 +7,13 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@shared": path.resolve(import.meta.dirname, "../shared"),
-      "@assets": path.resolve(import.meta.dirname, "src/assets"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
     },
   },
   build: {
-    outDir: path.resolve(import.meta.dirname, "../dist/public"),
+    outDir: "dist",
     emptyOutDir: true,
+    sourcemap: true,
   },
   server: {
     fs: {
