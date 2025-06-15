@@ -7,13 +7,14 @@
     "strict": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "..",
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@frontend/*": ["../frontend/*"]
+      "@frontend/*": ["../frontend/*"],
+      "@shared/*": ["../shared/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "../shared/**/*"],
   "exclude": ["node_modules", "dist"]
 } 

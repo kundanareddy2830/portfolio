@@ -1,6 +1,16 @@
 import { config } from 'dotenv';
 config();
-import express, { type Request, Response, NextFunction } from "express";
+
+import express, { type Request, Response, NextFunction } from 'express';
+import cors from 'cors';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { createTransport } from 'nodemailer';
+import { z } from 'zod';
+import { eq } from 'drizzle-orm';
+import { db } from './db';
+import { contact } from './db/schema';
+import { insertContactSchema } from '@shared/schema';
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -42,11 +52,8 @@ app.use((req, res, next) => {
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
-
-    res.status(status).json({ message });
-    throw err;
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
   });
 
   // importantly only setup vite in development and after
