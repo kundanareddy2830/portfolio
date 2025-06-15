@@ -100,7 +100,7 @@ export default function HeroSection() {
           >
             <button
               onClick={() => scrollToSection("#projects")}
-              className="bg-gray-100 text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
+              className="bg-gray-200 text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105"
             >
               View My Work
             </button>
@@ -115,7 +115,7 @@ export default function HeroSection() {
             <a
               href="/images/projects/my-resume.pdf"
               download
-              className="bg-gray-100 text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 flex items-center justify-center"
+              className="bg-gray-200 text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:scale-105 flex items-center justify-center"
             >
               Download CV
             </a>
