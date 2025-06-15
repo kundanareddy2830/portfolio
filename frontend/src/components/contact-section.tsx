@@ -36,10 +36,20 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
+      console.log('Submitting form data:', data);
+      try {
+        const response = await apiRequest("POST", "/api/contact", data);
+        console.log('Response received:', response);
+        const json = await response.json();
+        console.log('Response JSON:', json);
+        return json;
+      } catch (error) {
+        console.error('Error in mutationFn:', error);
+        throw error;
+      }
     },
-    onSuccess: () => {
+    onSuccess: (data) => {
+      console.log('Form submission successful:', data);
       setSubmitStatus("success");
       form.reset();
       setTimeout(() => setSubmitStatus(null), 5000);
@@ -52,6 +62,7 @@ export default function ContactSection() {
   });
 
   const onSubmit = (data: ContactFormData) => {
+    console.log('Form submitted with data:', data);
     contactMutation.mutate(data);
   };
 
