@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ChevronDown, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
 import { portfolioData } from "@/lib/data";
 
 export default function HeroSection() {
