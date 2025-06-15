@@ -7,8 +7,9 @@ import { type Server } from "http";
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
+// Get the directory name in a way that works with both ESM and CJS
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export function log(message: string, source = "express") {
   const formattedTime = new Date().toLocaleTimeString("en-US", {
