@@ -1,29 +1,61 @@
-# Kundana Reddy – Portfolio
+# Modern Portfolio Website
 
-This is my personal fullstack portfolio showcasing my skills in AI, web development, and system design. Built with React, Tailwind CSS, TypeScript, Node.js, and Express.
+A modern, responsive portfolio website built with React, TypeScript, and Node.js. Features a clean design, contact form, and smooth animations.
 
 ## Features
-- Fully responsive React frontend with Vite + Tailwind
-- Contact form powered by Express + Nodemailer
-- Clean, accessible UI
-- Built with love and curiosity, not templates
+- 🎨 Modern, responsive design with Tailwind CSS
+- 📱 Mobile-first approach
+- 📬 Contact form with email integration
+- ⚡ Fast performance with Vite
+- 🔒 Secure backend with Express
+- 🎯 SEO optimized
 
 ## Tech Stack
-- Frontend: React, TypeScript, Tailwind CSS, Vite
-- Backend: Node.js, Express
-- Database: PostgreSQL with Drizzle ORM
-- Authentication: Passport.js
-- Email: Nodemailer
+### Frontend
+- React 18
+- TypeScript
+- Tailwind CSS
+- Vite
+- React Query
+- Framer Motion
 
+### Backend
+- Node.js
+- Express
+- Nodemailer
+- CORS
+- Environment Variables
 
-## Getting Started
+## Development
 
 1. Clone the repository
 2. Install dependencies:
    ```bash
+   # Install frontend dependencies
+   cd frontend
+   npm install
+
+   # Install backend dependencies
+   cd ../backend
    npm install
    ```
-3. Start the development server:
+
+3. Set up environment variables:
+   - Create `.env` files in both frontend and backend directories
+   - Add required environment variables (see `.env.example` files)
+
+4. Start development servers:
    ```bash
+   # Start frontend (in frontend directory)
+   npm run dev
+
+   # Start backend (in backend directory)
    npm run dev
    ```
+
+## Deployment
+- Frontend: Deployed on Netlify
+- Backend: Deployed on Render
+
+## License
+MIT License

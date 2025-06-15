@@ -91,6 +91,16 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "Personal Portfolio Website",
+      description: "A modern, responsive portfolio website showcasing my projects and skills. Features a clean design, contact form with email integration, and smooth animations. Built with React, TypeScript, and Node.js.",
+      shortDescription: "Modern portfolio website with contact form and animations",
+      image: "/images/projects/portfolio.png",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Nodemailer"],
+      demoUrl: "https://kundanaportfolio.netlify.app",
+      githubUrl: "https://github.com/kundanareddy2830/portfolio.git"
+    },
+    {
+      id: 2,
       title: "Movie Recommender System",
       description: "Built a content-based movie recommendation system using user preferences. Integrated TMDB API and deployed using Streamlit with intelligent recommendation algorithms.",
       shortDescription: "AI-powered movie recommendations using machine learning",
@@ -100,7 +110,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/movie_recommendation-system.git"
     },
     {
-      id: 2,
+      id: 3,
       title: "Object Detection System",
       description: "Developed a real-time object detection web app using YOLOv8 and webcam/image input. Created an intuitive UI with adjustable detection settings.",
       shortDescription: "Real-time object detection with YOLOv8 integration",
@@ -110,7 +120,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/object-detection.git"
     },
     {
-      id: 3,
+      id: 4,
       title: "Adaptive Quiz App",
       description: "A React-based quiz application that intelligently adapts question difficulty based on user performance. Features a modern, animated UI with engaging interactions.",
       shortDescription: "Smart quiz app with adaptive difficulty system",
@@ -120,7 +130,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/quiz.git"
     },
     {
-      id: 4,
+      id: 5,
       title: "Interactive Chess Game",
       description: "Created a fully functional chess game with interactive UI and logic. Implemented turn-based system, piece selection, and valid move handling with elegant design.",
       shortDescription: "Full-featured chess game with interactive gameplay",
@@ -130,7 +140,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/chess-game.git"
     },
     {
-      id: 5,
+      id: 6,
       title: "Simon Says Game",
       description: "Developed a memory-based Simon Says game with event-driven programming. Features interactive gameplay, sound effects, and progressive difficulty levels.",
       shortDescription: "Classic memory game with interactive design",
@@ -140,7 +150,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/simon-game.git"
     },
     {
-      id: 6,
+      id: 7,
       title: "Spotify Music Interface",
       description: "Built a responsive music player with sleek UI and basic functionality. Features include playlist management, responsive design, and modern interface elements.",
       shortDescription: "Modern music player with responsive design",
@@ -150,7 +160,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/spotify-UI.git"
     },
     {
-      id: 7,
+      id: 8,
       title: "Music Playlist Player",
       description: "Built a responsive music player with sleek UI and basic functionality. Features playlist management, audio controls, and modern interface design.",
       shortDescription: "Interactive music playlist with audio controls",
@@ -160,7 +170,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/Playlist.git"
     },
     {
-      id: 8,
+      id: 9,
       title: "Chat Application Interface",
       description: "Built a chat UI with sidebar navigation, message bubbles, and mobile-friendly design. Features responsive layout and modern messaging interface.",
       shortDescription: "Modern chat interface with responsive design",
@@ -170,7 +180,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/kundanareddy2830/Chat-Application.git"
     },
     {
-      id: 9,
+      id: 10,
       title: "Swipe-Based Learning Recommendation",
       description: "A modern, interactive application that helps users discover personalized learning techniques through an intuitive swipe interface. The system intelligently learns from user preferences.",
       shortDescription: "Personalized learning recommendations with swipe interface",
