@@ -25,6 +25,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate request body
       const validatedData = insertContactSchema.parse(req.body);
       
+      // Log email configuration status (without exposing sensitive data)
+      console.log('Email configuration status:', {
+        hasEmailUser: !!process.env.EMAIL_USER,
+        hasEmailPass: !!process.env.EMAIL_PASS,
+        hasEmailReceiver: !!process.env.EMAIL_RECEIVER,
+        smtpHost: process.env.SMTP_HOST || 'smtp.gmail.com',
+        smtpPort: process.env.SMTP_PORT || '587'
+      });
+      
       // Send email notification
       if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
         try {
@@ -45,7 +54,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
             replyTo: validatedData.email,
           };
           
+          console.log('Attempting to send email to:', process.env.EMAIL_RECEIVER || process.env.EMAIL_USER);
           await transporter.sendMail(mailOptions);
+          console.log('Email sent successfully');
           
           res.json({ 
             success: true, 
@@ -59,6 +70,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
           });
         }
       } else {
+        console.error('Email configuration missing:', {
+          hasEmailUser: !!process.env.EMAIL_USER,
+          hasEmailPass: !!process.env.EMAIL_PASS
+        });
         res.status(500).json({ 
           success: false, 
           message: "Email configuration is missing. Please contact the administrator." 
